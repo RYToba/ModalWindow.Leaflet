@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaflet-test.js</title>
+<meta name="description" content="ページの説明">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+<link rel="stylesheet" type="text/css" href="css/test.css">
+<script src="js/test.js"></script>
+</head>
+<body>
+<!-- メインマップ -->
+<div id="demoMap"></div>
+<div><input type="button" name="mapping_button" id="button_mapping" value="モーダルウィンドウ" onclick="OnButtonClick()"></div>
+<div>
+<!-- モーダルウィンドウ用のレイヤー -->
+<div id="layerMapping"></div>
+</div>
+<!-- モーダルウィンドウの中身 -->
+<div id="popupMapping">
+  <div style="margin-bottom: 5px;margin-top: 5px;">情報をマッピング！</div>
+  <form name="mapping_title" id="id_mapping_popup" action="">
+    場所：<input type="text" name="id_textbox" maxlength="10" placeholder="10文字以内で入力"><br>
+    <label style="margin-top: 5px;">メッセージはこちら↓</label><br>
+    <textarea name="messagebody" placeholder="メッセージを入力"></textarea><br>
+    <div style="text-align: center;">
+      <div id="mapping_map"></div>
+    </div>
+    <input type="button" id="close_no" value="キャンセル" style="margin-left: 0px; margin-top: 5px;">
+    <input type="button" id="close_ok" value="OK！">
+  </form>
+</div>
+</body>
+</html>
